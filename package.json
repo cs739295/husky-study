@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "prepare": "husky install",
-    "lint": "lint-staged --allow-empty"
+    "lint": "lint-staged"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -15,14 +15,17 @@
   "lint-staged": {
     "src/**/!(*.min).js": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "git add ."
     ],
     "src/**/*.{ts,vue}": [
       "prettier --write",
-      "eslint --fix"
+      "eslint --fix",
+      "git add ."
     ],
     "src/**/*.{ts,js,vue,html,css,scss,sass,stylus}": [
-      "prettier --write"
+      "prettier --write",
+      "git add ."
     ]
   },
   "devDependencies": {
