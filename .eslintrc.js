@@ -33,11 +33,17 @@ module.exports = {
     /**
      * eslint:recommended  启用核心规则，在规则页面中被标记为 √ 的。
      */
+    // extends: [
+    //   // plugin:(此处不能有空格)包名/配置名称。解析时plugin是解析成 eslint-plugin-vue。如果有空格会解析失败，eslint-plugin- vue。
+    //   // plugin可以省略包名的前缀 eslint-plugin-
+    //   'plugin:vue/essential',
+    //   'eslint:recommended'
+    // ],
     extends: [
-      // plugin:(此处不能有空格)包名/配置名称。解析时plugin是解析成 eslint-plugin-vue。如果有空格会解析失败，eslint-plugin- vue。
-      // plugin可以省略包名的前缀 eslint-plugin-
-      'plugin:vue/essential',
-      'eslint:recommended'
+      //继承 vue 的标准特性
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "prettier",
     ],
 
     /**

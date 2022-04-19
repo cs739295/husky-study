@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "prepare": "husky install",
-    "lint": "lint-staged"
+    "lint": "lint-staged --allow-empty"
   },
   "dependencies": {
     "core-js": "^3.6.5",
